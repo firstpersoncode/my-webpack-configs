@@ -6,7 +6,7 @@ const appDirectory = fs.realpathSync(process.cwd());
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 const paths = {
-  TEMPLATE_HTML: resolveApp("config/webpack/template.html"),
+  TEMPLATE_HTML: resolveApp("webpack/template.html"),
   BUILD_: resolveApp("build"),
   BUILD_CLIENT: resolveApp("build/client"),
   BUILD_SERVER: resolveApp("build/server"),
