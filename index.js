@@ -11,8 +11,6 @@ const processExit = (err, code) => {
 };
 
 const setEnv = env => `cross-env NODE_ENV=${env}`;
-const transpile = `yarn-or-npm babel -d ${paths.BUILD_}/transpiled ./${paths.SRC_} --extensions .es6,.js,.es,.jsx,.mjs,.ts,.tsx --ignore **/*.d.ts`;
-
 // // execute a single shell command
 // shell.exec('node', function(err){
 //     console.log('executed test');
@@ -33,12 +31,12 @@ switch (task) {
   }
   case "start": {
     // execute multiple commands in series
-    shell.series([setEnv("development"), "node utils/start.js"], processExit);
+    shell.series([setEnv("development"), "node ./utils/start.js"], processExit);
     break;
   }
   case "build": {
     // execute multiple commands in series
-    shell.series([setEnv("production"), "node utils/build.js"], processExit);
+    shell.series([setEnv("production"), "node ./utils/build.js"], processExit);
     break;
   }
   default:
