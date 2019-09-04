@@ -1,6 +1,6 @@
 {
   "name": "my-webpack-configs",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Nasser Maronie <npm@firstpersoncode.com> (https://github.com/firstpersoncode)",
   "license": "MIT",
   "engines": {
@@ -12,7 +12,7 @@
     "check:npm": "npm-check"
   },
   "bin": {
-    "my-react-script": "./index.js"
+    "my-webpack-configs": "./index.js"
   },
   "dependencies": {
     "case-sensitive-paths-webpack-plugin": "^2.2.0",
