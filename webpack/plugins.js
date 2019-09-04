@@ -5,8 +5,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CaseSensitivePathsPlugin = require("case-sensitive-paths-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-//   .BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 const paths = require("../utils/paths");
 const { clientOnly } = require("../utils/helpers");
@@ -41,12 +41,12 @@ const client = [
     __BROWSER__: "true"
   }),
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-  new ManifestPlugin({ fileName: "manifest.json" })
-  // new BundleAnalyzerPlugin({
-  //   analyzerPort: !isNaN(Number(process.env.PORT))
-  //     ? Number(process.env.PORT) + 2
-  //     : 8502
-  // })
+  new ManifestPlugin({ fileName: "manifest.json" }),
+  new BundleAnalyzerPlugin({
+    analyzerPort: !isNaN(Number(process.env.PORT))
+      ? Number(process.env.PORT) + 2
+      : 8502
+  })
 ].filter(Boolean);
 
 const server = [
