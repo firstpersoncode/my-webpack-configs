@@ -31,12 +31,18 @@ switch (task) {
   }
   case "start": {
     // execute multiple commands in series
-    shell.series([setEnv("development"), "node ./utils/start.js"], processExit);
+    shell.series(
+      [setEnv("development"), `node ${paths.UTILS}/start.js`],
+      processExit
+    );
     break;
   }
   case "build": {
     // execute multiple commands in series
-    shell.series([setEnv("production"), "node ./utils/build.js"], processExit);
+    shell.series(
+      [setEnv("production"), `node ${paths.UTILS}/build.js`],
+      processExit
+    );
     break;
   }
   default:

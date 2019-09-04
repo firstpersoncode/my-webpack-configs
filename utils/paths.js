@@ -14,6 +14,7 @@ const paths = {
   SRC_CLIENT: resolveApp("src/client"),
   SRC_SERVER: resolveApp("src/server"),
   SRC_APP: resolveApp("src/app"),
+  UTILS: resolveApp("utils"),
   PUBLIC_PATH: "/static/"
 };
 
