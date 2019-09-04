@@ -11,7 +11,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const paths = require("../utils/paths");
 const { clientOnly } = require("../utils/helpers");
 
-const env = require("../env")();
+// const env = require("../env")();
 
 const shared = [
   new MiniCssExtractPlugin({
@@ -35,7 +35,7 @@ const client = [
     }),
   // new webpack.ProgressPlugin(), // make this optional e.g. via `--progress` flag
   new CaseSensitivePathsPlugin(),
-  new webpack.DefinePlugin(env.stringified),
+  // new webpack.DefinePlugin(env.stringified),
   new webpack.DefinePlugin({
     __SERVER__: "false",
     __BROWSER__: "true"
