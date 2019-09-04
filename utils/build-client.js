@@ -6,7 +6,7 @@ const webpackConfig = require("../webpack")(
   process.env.NODE_ENV || "production"
 );
 
-const paths = require("../utils/paths");
+const paths = require("./paths");
 const { logMessage, compilerPromise } = require("./helpers");
 
 const build = async () => {

@@ -1,6 +1,6 @@
 const rimraf = require("rimraf");
 
-const paths = require("../utils/paths");
+const paths = require("./paths");
 const { clientOnly } = require("./helpers");
 
 rimraf.sync(paths.BUILD_CLIENT);
