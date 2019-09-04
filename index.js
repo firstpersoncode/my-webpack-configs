@@ -22,7 +22,7 @@ switch (task) {
     shell.series(
       [
         setEnv("production"),
-        `webpack --config config/webpack/client.prod.js --json > ${paths.BUILD_CLIENT}/static/bundle-stats.json`,
+        `webpack --config node_modules/my-webpack-configs/webpack/client.prod.js --json > ${paths.BUILD_CLIENT}/static/bundle-stats.json`,
         `webpack-bundle-analyzer ${paths.BUILD_CLIENT}/static/bundle-stats.json`
       ],
       processExit
