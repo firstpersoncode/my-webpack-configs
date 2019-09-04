@@ -32,7 +32,10 @@ switch (task) {
   case "start": {
     // execute multiple commands in series
     shell.series(
-      [setEnv("development"), `node ${paths.UTILS}/start.js`],
+      [
+        setEnv("development"),
+        `node node_modules/my-webpack-configs/utils/start.js`
+      ],
       processExit
     );
     break;
@@ -40,7 +43,10 @@ switch (task) {
   case "build": {
     // execute multiple commands in series
     shell.series(
-      [setEnv("production"), `node ${paths.UTILS}/build.js`],
+      [
+        setEnv("production"),
+        `node node_modules/my-webpack-configs/utils/build.js`
+      ],
       processExit
     );
     break;
