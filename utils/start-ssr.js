@@ -4,7 +4,7 @@ const express = require("express");
 const webpackDevMiddleware = require("webpack-dev-middleware");
 const webpackHotMiddleware = require("webpack-hot-middleware");
 
-const webpackConfig = require("../config/webpack")(
+const webpackConfig = require("../webpack")(
   process.env.NODE_ENV || "development"
 );
 

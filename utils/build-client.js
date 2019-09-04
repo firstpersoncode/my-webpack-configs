@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const rimraf = require("rimraf");
 const chalk = require("chalk");
 
-const webpackConfig = require("../config/webpack")(
+const webpackConfig = require("../webpack")(
   process.env.NODE_ENV || "production"
 );
 
